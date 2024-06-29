@@ -28,7 +28,7 @@ public class FilialService {
 
 
     public List<FilialResponse> buscaNomeAnoServico(String nome, Integer anosServico) {
-        return repository.findAllByNomeOrAnosServico(nome,anosServico).stream().map(
+        return repository.findAllByNomeOrAnosServico(nome, anosServico).stream().map(
                 filialEntity -> new FilialResponse(
                         filialEntity.getId(),
                         filialEntity.getNome(),
@@ -50,4 +50,5 @@ public class FilialService {
                 entitySalva.getNome(),
                 entitySalva.getAnosServico());
     }
+
 }
